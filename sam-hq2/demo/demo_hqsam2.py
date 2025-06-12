@@ -43,6 +43,7 @@ def show_res(masks, scores, input_point, input_label, input_box, filename, image
         plt.savefig(filename+'_'+str(i)+'.png',bbox_inches='tight',pad_inches=-0.1)
         plt.close()
 
+
 def show_res_multi(masks, scores, input_point, input_label, input_box, filename, image):
     plt.figure(figsize=(10, 10))
     plt.imshow(image)
