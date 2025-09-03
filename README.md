@@ -1,6 +1,6 @@
 # Segment Anything in High Quality
 
-## HCI:
+## HCI: run gradio demo
 ```bash
 python sam-hq2\demo\demo_hqsam2.py
 ```

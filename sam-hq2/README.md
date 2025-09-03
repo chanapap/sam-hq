@@ -11,7 +11,7 @@ We propose **HQ-SAM2** to upgrade SAM2 to **higher quality** by extending our tr
 
 ![HQ-SAM2 results comparison](assets/hq-sam2-results.png?raw=true)
 
-## Installation
+## HCI Installation
 
 HQ-SAM 2 needs to be installed first before use. The code requires `python>=3.10`, as well as `torch>=2.3.1` and `torchvision>=0.18.1`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. You can install SAM 2 on a GPU machine using:
 
@@ -19,8 +19,14 @@ HQ-SAM 2 needs to be installed first before use. The code requires `python>=3.10
 git clone https://github.com/SysCV/sam-hq.git
 conda create -n sam_hq2 python=3.10 -y
 conda activate sam_hq2
+conda install pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.4 -c pytorch -c nvidia
 cd sam-hq/sam-hq2
 pip install -e .
+pip install -r requirements.txt
+
+python demo\01-gradio_app_hqsam2.py # interactive point prompt
+python demo\02-gradio_app_bbox.py # point and bbox prompt
+
 ```
 If you are installing on Windows, it's strongly recommended to use [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install) with Ubuntu.
 

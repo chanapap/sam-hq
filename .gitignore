@@ -3,3 +3,4 @@ __pycache__/
 *.pt
 
 output_automask*
+SAMHQ-demo-output/
